@@ -28,88 +28,88 @@ int shutDown = 0;
 //alphabet2: uvwxyz0123456789.,?
 
 const char alphabet1Eng[MAX_CHAR] = {'a',
-																		 'b',
-																		 'c',
-																		 'd',
-																		 'e',
-																		 'f',
-																		 'g',
-																		 'h',
-																		 'i',
-																		 'j',
-																		 'k',
-																		 'l',
-																		 'm',
-																		 'n',
-																		 'o',
-																		 'p',
-																		 'q',
-																		 'r',
-																		 's',
-																		 't'};
+				     'b',
+				     'c',
+				     'd',
+				     'e',
+				     'f',
+				     'g',
+				     'h',
+				     'i',  
+				     'j',
+				     'k',
+				     'l',
+				     'm',
+				     'n',
+				     'o',
+				     'p',
+				     'q',
+				     'r',
+				     's',
+				     't'};
 
 const string alphabet1Morse[MAX_CHAR] = {".-", //a
-																				 "-...", //b
-																				 "-.-.", //c
-																	 			 "-..", //d
-																				 ".", //e
-																			 	 "..-.", //f
-																				 "--.", //g
-																			 	 "....", //h
-																				 "..", //i
-																				 ".---", //j
-																				 "-.-", //k
-																				 ".-..", //l
-																				 "--", //m
-																				 "-.", //n
-																				 "---", //o
-																				 ".--.", //p
-																				 "--.-", //q
-																				 ".-.", //r
-																				 "...", //s
-																				 "-"}; //t
+					 "-...", //b
+					 "-.-.", //c
+					 "-..", //d
+					 ".", //e
+					 "..-.", //f
+					 "--.", //g
+					 "....", //h
+					 "..", //i
+					 ".---", //j
+					 "-.-", //k
+					 ".-..", //l
+					 "--", //m
+					 "-.", //n
+					 "---", //o
+					 ".--.", //p
+					 "--.-", //q
+					 ".-.", //r
+					 "...", //s
+					 "-"}; //t
 
 const char alphabet2Eng[MAX_CHAR] = {'u',
-																		 'v',
-																		 'w',
-																		 'x',
-																		 'y',
-																		 'z',
-																		 '0',
-																		 '1',
-																		 '2',
-																		 '3',
-																		 '4',
-																		 '5',
-																		 '6',
-																		 '7',
-																		 '8',
-																		 '9',
-																		 '.',
-																		 ',',
-																		 '?',
-																		 '!'};
+				     'v',
+				     'w',
+				     'x',
+				     'y',
+				     'z',
+				     '0',
+				     '1',
+				     '2',
+				     '3',
+				     '4',
+				     '5',
+				     '6',
+				     '7',
+				     '8',
+				     '9',
+				     '.',
+				     ',',
+				     '?',
+				     '!'};
 
 const string alphabet2Morse[MAX_CHAR] = {"..-", //u
-																				 "...-", //v
-																				 ".--", //w
-																				 "-..-", //x
-																				 "-.--", //y
-																				 "--..", //z
-																				 "-----", //0
-																			 	 ".----", //1
-																				 "..---", //2
-																				 "...--", //3
-																				 "....-", //4
-																				 ".....", //5
-																				 "-....", //6
-																				 "--...", //7
-																				 "---..", //8
-																				 "----.", //9
-																				 ".-.-.-", //.
-																				 "--..--", //,
-																				 "..--..", //?
-																				 "-.-.--"}; //!
+					 "...-", //v
+					 ".--", //w
+					 "-..-", //x
+					 "-.--", //y
+					 "--..", //z
+					 "-----", //0
+					 ".----", //1
+					 "..---", //2
+					 "...--", //3
+					 "....-", //4
+					 ".....", //5
+					 "-....", //6
+					 "--...", //7
+					 "---..", //8
+					 "----.", //9
+					 ".-.-.-", //.
+					 "--..--", //,
+					 "..--..", //?
+					 "-.-.--"}; //!
 
 void configureSensors();
 int readFromFile(char * updateWord);
@@ -255,6 +255,7 @@ void travel (int motorPower, int dist)
 }
 
 // moves the motor forward based on motorpower
+
 void powerSetting(int motorPower)
 {
 	  shutdownCheck();
@@ -262,6 +263,7 @@ void powerSetting(int motorPower)
 }
 
 // breaks the dots and dashes of each letter into the pseudo binary and travels based on the pseudo binary
+
 void moveRobotForwardWhenDrawing(char * currCode)
 {
 	shutdownCheck();
@@ -306,21 +308,18 @@ void letterMatch(char * userWord, int wordSize)
 		for (int count2 = 0; count2 < MAX_DOT_DASH; count2++)
 		{
 			shutdownCheck();
-			//test+= userWord[count2];
 		}
 		displayString(0, "%s", "Word:");
 		displayString(1, "%s", userWord);
 
 		displayString(4, "%s", "Current Letter: ");
 		displayString(5, "%c", userWord[count]);
+		
 		// checks every value in the array
 		for (int count1 = 0; count1 < MAX_CHAR ; count1++)
 		{
 			shutdownCheck();
-			//displayString(8, "%s", "alphabet1");
-			//displayString(9, "%c", alphabet1Eng[count1]);
-			//displayString(10, "%s", "alphabet2");
-			//displayString(11, "%c", alphabet2Eng[count1]);
+		
 			// checks if the letter matches a letter in the alphabet1 array
 			if (userWord[count] == alphabet1Eng[count1])
 			{
@@ -376,7 +375,7 @@ void readMorseCode()
 		powerSetting(MOTOR_POWER_READ);
 		while(SensorValue[S4] != (int)colorWhite && SensorValue[S4] != (int)colorRed) // go while seeing black
 		{}
-    shutdownCheck();
+    		shutdownCheck();
 
 		powerSetting(0);
 
@@ -384,8 +383,6 @@ void readMorseCode()
 		displayString(0, "%s", "Group 34");
 		displayString(1, "%s", "Olivia Y, Rijin M, Krish V, Mridul T");
 		shutdownCheck();
-		//displayString(0, "%s", "dist black space:");
-		//displayString(1, "%f", distTravelled);
 
 		wait1Msec(1000);
 
@@ -393,7 +390,11 @@ void readMorseCode()
 		if (fabs(distTravelled - DOT_LENGTH) < TOL)
 		{
 			shutdownCheck();
-			readDotOrDash = DOT_READ; // if the distance travelled is = to a dot length, then a dot would be added to the string called readLetter
+			readDotOrDash = DOT_READ; 
+			/*
+			if the distance travelled is = to a dot length, then a dot would 
+			be added to the string called readLetter
+			*/ 
 		}
 		else
 		{
@@ -415,11 +416,6 @@ void readMorseCode()
 		shutdownCheck();
 		distTravelledWhiteSpace = nMotorEncoder[motorA] * (PI*2.75) / 180; //measure white space distance;
 
-		//displayString(4, "%s", "Group 34");
-		//displayString(5, "%s", "Olivia Y, Rijin M, Krish V, Mridul T");
-		//displayString(4, "%s", "white space distance:");
-		//displayString(5, "%f", distTravelledWhiteSpace);
-
 		shutdownCheck();
 		readLetterMorse += readDotOrDash;
 		displayString(6, "%s", "Code:");
@@ -436,8 +432,7 @@ void readMorseCode()
 				shutdownCheck();
 				if (readLetterMorse == alphabet1Morse[count])
 				{
-					//displayString(14, "%s", "cleared readLetterMorse");
-					//displayString(15, "%s", readLetterMorse);
+			
 					displayString(9, "%s", "Letter:");
 					readLetterMorse = "";
 					addLetter = alphabet1Eng[count];
@@ -447,8 +442,6 @@ void readMorseCode()
 				}
 				else if (readLetterMorse == alphabet2Morse[count])
 				{
-					//displayString(14, "%s", "cleared readLetterMorse");
-					//displayString(15, "%s", readLetterMorse);
 					displayString(9, "%s", "Letter: ");
 					readLetterMorse = "";
 					addLetter = alphabet2Eng[count];
