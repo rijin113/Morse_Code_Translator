@@ -46,8 +46,8 @@ Ensure that you have typed the number of characters in the word before typing th
 The robot was programmed using Robot C (The syntax is very similar to C++).
 
 ## Further Improvements
-• add new features such as the robot's ability to listen to morse code using sound level sensors and timers or 
+• Add new features such as the robot's ability to listen to morse code using sound level sensors and timers or 
   being able to input morse code through taps with a touch sensor and a timer
   
-• currently, the robot draws morse code based on a word provided in English. To improve the robot, we can have the file input provided in
+• Currently, the robot draws morse code based on a word provided in English. To improve the robot, we can have the file input provided in
   multiple languages so that the robot is capable of translating and drawing words given in multiple languages.
