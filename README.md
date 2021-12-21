@@ -41,9 +41,9 @@ Once the robot is connected to Robot-C, click on `Robot` then `Lego Brick`.
 Navigate to the file management utility and upload the file `userWord.txt` with the new changes.
 Ensure that you have typed the number of characters in the word before typing the word itself.
 
-## Code
+## Program
 
-The robot was programmed using Robot C (The syntax is very similar to C++).
+This robot was coded in Robot C (The syntax is very similar to C++).
 
 ## Further Improvements
 • Add new features such as the robot's ability to listen to morse code using sound level sensors and timers or 
