@@ -1,6 +1,8 @@
 /*
-once robot is connected, go to lego brick, then file management utility then upload file that you want
-to the robot (upload userword.txt)
+
+once the robot is connected to Robot C, click on Robot, then lego brick, and then navigate to the file management utility. 
+Upload userword.txt with the word that you want the robot to draw in morse code. 
+
 */
 #include "PC_FileIO.c"
 
@@ -138,10 +140,11 @@ task main()
 				{
 					// the max character that you can have is 20 so declare a 1D array of 20 indexes to store letters in word
 					char userWord[MAX_CHAR];
+					
 					// call readfrom file to read in the data and convert into a split array of just letters
 					int wordSize = readFromFile(userWord);
 
-				// matches the letters to their morse code + travels based on the words
+					// matches the letters to their morse code + travels based on the words
 					letterMatch(userWord, wordSize);
 				}
 		}
