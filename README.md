@@ -52,3 +52,8 @@ This robot was coded in Robot C (The syntax is very similar to C++).
   
 • Currently, the robot draws morse code based on a word provided in English. To improve the robot, we can have the file input provided in
   multiple languages so that the robot is capable of translating and drawing words given in multiple languages.
+  
+• Since the robot projects the read English letter to the screen once that letter is read and translated from morse code, an improvement could be that the robot 
+  concatenates all of the read English letters forming the English word once it reaches the end of the morse code.
+  
+  
