@@ -2,7 +2,7 @@
 
 <img src="images/morseCodeRobot.png" width="400" height="400">
 
-Group Members: Rijin Muralidharan, Olivia Ye, Mridul Thakur, Krish Vijayan <br>
+Group Members: Rijin Muralidharan, Olivia Ye, Mridul S Thakur, Krish Vijayan <br>
 For our final course project (MTE 121: Digital Computation), we built a robot that can draw and read morse code. 
 
 ## Robot Tasks
